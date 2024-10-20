@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "custom",
+	"version": "${version}",
+	"name": "Custom Mod",
+	"description": "Im testing what i can do myself bye",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/custom/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.lohan.custom.CustomMod"
+		],
+		"client": [
+			"net.lohan.custom.CustomModClient"
+		],
+		"fabric-datagen": [
+			"net.lohan.custom.CustomModDataGenerator"
+		]
+	},
+	"mixins": [
+		"custom.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.7",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
